@@ -2,7 +2,7 @@ var issueContainer = document.getElementById('issues');
 var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
-  var requestUrl = 'https://api.github.com/repos/IBM/clai/issues?per_page=5';
+  var requestUrl = 'https://api.github.com/repos/nodejs/node/issues?per_page=5';
 
   fetch(requestUrl)
     .then(function (response) {

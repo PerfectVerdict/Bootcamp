@@ -24,7 +24,7 @@ The homepage (`index.html`) should have the following:
 
 * A form with a text input field to capture a search query and an option select dropdown to capture the format of the search query. The options in the dropdown should be a list of the possible format values listed in the [Library of Congress API documentation on requests](https://www.loc.gov/apis/json-and-yaml/requests/endpoints/).
 
-* A browser event listener attached to the form to execute a function on submission, which will capture both form values and redirect the user to a search results page with those values included in the URL as query parameters. This will use the browser's `location.replace()` method.
+* A browser event listener attached to the form to execute a function on submission, which will capture both form values and redirect the user to a search results page with those values included in the URL as query parameters. This will use the browser's `location.assign()` method.
 
 * If there is no format selected from the dropdown, the URL should look something like the following example:
 
