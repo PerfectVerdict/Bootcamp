@@ -23,7 +23,7 @@ const dishes = [
   {
     dish_name: 'Pork Gyoza',
     description:
-      'Homemade Japanese dumplings stuffed with pork and green onion filling',
+      'Homemade Japanese dumplings stuffed with a pork and green onion filling',
   },
   {
     dish_name: 'Yebeg Tibs with Injera Bread',
@@ -41,6 +41,11 @@ router.get('/', async (req, res) => {
   res.render('all');
 });
 
-// TODO: Add a route called `/dish/:num` below
+// Get a dish
+router.get('/dish/:num', async (req, res) => {
+  // This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
+  // Now, we have access to a dish description in the 'dish' template.
+  return res.render('dish', dishes[req.params.num - 1]);
+});
 
 module.exports = router;
